@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 1.1em;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: red;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    height: 400px;
+    width: 300px;
+}
+
+form {
+    background-color: aqua;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+
+    display: grid;
+    grid-template-areas: 
+        "input input input input"
+        "one two three sum"
+        "four five six subtraction"
+        "seven eight nine multiplication"
+        "dot zero  submit division"
+    ;
+    gap: 10px;
+}
+
+#input {
+    grid-area: input;
+    resize: none;
+    text-align: right;
+    padding: 10px;
+}
+
+.one {
+    grid-area: one;
+}
+
+.two {
+    grid-area: two;
+}
+
+.three {
+    grid-area: three;
+}
+
+.four {
+    grid-area: four;
+}
+
+.five {
+    grid-area: five;
+}
+
+.six {
+    grid-area: six;
+}
+
+.seven {
+    grid-area: seven;
+}
+
+.eight {
+    grid-area: eight;
+}
+
+.nine {
+    grid-area: nine;
+}
+
+.zero {
+    grid-area: zero;
+}
+
+#sum {
+    grid-area: sum;
+}
+
+#subtraction {
+    grid-area: subtraction;
+}
+
+#multiplication {
+    grid-area: multiplication;
+}
+
+#division {
+    grid-area: division;
+}
+
+#dot {
+    grid-area: dot;
+}
+
+#submit{
+    grid-area: submit;
+}
