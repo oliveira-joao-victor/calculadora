@@ -1,3 +1,8 @@
+:root {
+    --primary-color: #39393A;
+    --secondary-color: #9B9B93;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -8,7 +13,7 @@
 body {
     width: 100vw;
     height: 100vh;
-    background-color: red;
+    background-color: var(--primary-color);
 
     display: flex;
     justify-content: center;
@@ -18,30 +23,66 @@ body {
 main {
     height: 400px;
     width: 300px;
-}
+    padding: 10px;
 
-form {
-    background-color: aqua;
-    height: 100%;
-    width: 100%;
-    padding: 20px;
+    background-color: var(--primary-color);
+    border-radius: 0.1em;
 
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:
         "input input input input"
-        "one two three sum"
-        "four five six subtraction"
-        "seven eight nine multiplication"
-        "dot zero  submit division"
+        "one two three clear"
+        "four five six sum"
+        "seven eight nine subtraction"
+        "dot zero division multiplication"
+        "submit submit submit submit"
     ;
     gap: 10px;
 }
+@media (max-width: 500px) {
+    main {
+        width: 100%;
+        height: 70%;
+    }
+}
 
-#input {
+button {
+    background-color: var(--primary-color);
+    border: 1px solid var(--secondary-color);
+    border-radius: 0.3em;
+    color: #F5F5F4;
+    outline: none;
+    cursor: pointer;
+}
+button:active{
+    background-color: var(--secondary-color);
+}
+
+textarea {
     grid-area: input;
     resize: none;
-    text-align: right;
     padding: 10px;
+    border-radius: 0.3em;
+    
+    background-color: var(--secondary-color);
+    color: #F5F5F4;
+
+    white-space: pre;
+    outline: none;
+
+    cursor: auto;
+}
+
+.operators {
+    background-color: #954B80;
+    border-color: #954B80;
+    color: #F8F1F6;
+}
+.operators:hover {
+    background-color: #AD5C96;
+}
+.operators:active{
+    background-color: #C185B0;
 }
 
 .one {
@@ -104,6 +145,28 @@ form {
     grid-area: dot;
 }
 
-#submit{
+#submit {
     grid-area: submit;
+    background-color: #0047CC;
+    color: #EBF2FF;
+    border-color: #0047CC;
+}
+#submit:hover{
+    background-color: #0056F5;
+}
+#submit:active{
+    background-color: #337AFF;
+}
+
+#clear {
+    grid-area: clear;
+    background-color: #E0000B;
+    border-color: #E0000B;
+    color: #FFEBEC;
+}
+#clear:hover{
+    background-color: #FF0A16;
+}
+#clear:active{
+    background-color: #FF4751;
 }

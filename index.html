@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,28 +10,32 @@
     <title>Calculadora</title>
 
     <link rel="stylesheet" href="styles.css">
+    <script src="./scripts.js"></script>
 </head>
-<body>
+
+<body onkeypress="tec(event)">
     <main id="calculadora">
-        <form>
-            <textarea id="input" cols="20" rows="2"></textarea>
-            <button type="button" class="numbers one">1</button>
-            <button type="button" class="numbers two">2</button>
-            <button type="button" class="numbers three">3</button>
-            <button type="button" class="numbers four">4</button>
-            <button type="button" class="numbers five">5</button>
-            <button type="button" class="numbers six">6</button>
-            <button type="button" class="numbers seven">7</button>
-            <button type="button" class="numbers eight">8</button>
-            <button type="button" class="numbers nine">9</button>
-            <button type="button" class="numbers zero">0</button>
-            <button type="button" id="dot">.</button>
-            <button type="button" id="sum">+</button>
-            <button type="button" id="subtraction">-</button>
-            <button type="button" id="multiplication">x</button>
-            <button type="button" id="division">/</button>
-            <button id="submit" type="submit">=</button>
-        </form>
+
+        <textarea id="input" readonly></textarea>
+        <button type="button" class="numbers one" id="1" onclick="addNumber(this.innerHTML)">1</button>
+        <button type="button" class="numbers two" onclick="addNumber(this.innerHTML)">2</button>
+        <button type="button" class="numbers three" onclick="addNumber(this.innerHTML)">3</button>
+        <button type="button" class="numbers four" onclick="addNumber(this.innerHTML)">4</button>
+        <button type="button" class="numbers five" onclick="addNumber(this.innerHTML)">5</button>
+        <button type="button" class="numbers six" onclick="addNumber(this.innerHTML)">6</button>
+        <button type="button" class="numbers seven" onclick="addNumber(this.innerHTML)">7</button>
+        <button type="button" class="numbers eight" onclick="addNumber(this.innerHTML)">8</button>
+        <button type="button" class="numbers nine" onclick="addNumber(this.innerHTML)">9</button>
+        <button type="button" class="numbers zero" onclick="addNumber(this.innerHTML)">0</button>
+        <button type="button" id="dot" onclick="addNumber(this.innerHTML)">.</button>
+        <button class="operators"type="button" id="sum" onclick="addOperator(this.innerHTML)">+</button>
+        <button class="operators"type="button" id="subtraction" onclick="addOperator(this.innerHTML)">-</button>
+        <button class="operators"type="button" id="multiplication" onclick="addOperator(this.innerHTML)">x</button>
+        <button class="operators"type="button" id="division" onclick="addOperator(this.innerHTML)">/</button>
+        <button id="submit" onclick="calc()">=</button>
+        <button id="clear" onclick="cleaning()">C</button>
+
     </main>
 </body>
+
 </html>
