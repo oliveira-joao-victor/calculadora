@@ -56,8 +56,13 @@ button {
     transition-duration: 0.3s;
     transition-delay: 0.1s;
 }
-button:active{
+
+button:hover {
     background-color: var(--secondary-color);
+}
+
+button:active{
+    background-color: #C4C4BF;
 }
 
 textarea {
@@ -82,9 +87,6 @@ textarea {
 }
 .operators:hover {
     background-color: #AD5C96;
-}
-.operators:active{
-    background-color: #C185B0;
 }
 
 .one {
