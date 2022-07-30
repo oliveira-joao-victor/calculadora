@@ -53,6 +53,8 @@ button {
     color: #F5F5F4;
     outline: none;
     cursor: pointer;
+    transition-duration: 0.3s;
+    transition-delay: 0.1s;
 }
 button:active{
     background-color: var(--secondary-color);
